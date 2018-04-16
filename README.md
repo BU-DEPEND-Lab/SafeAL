@@ -62,8 +62,7 @@ There will be a list of experiment environment:
 
 Please input an index to select the experiment environment.
 
-
-gridworld
+Gridworld
 ---------
 Firstly input an integer by following the prompt to decide the dimension for the nxn gridworld. If press Enter without inputing any integer, the default value 8 will be used.
 
