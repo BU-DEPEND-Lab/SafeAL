@@ -1,0 +1,26 @@
+
+
+
+Learning result for safety specification:
+
+P<=0.1[true U<=64 'unsafe']
+
+>>>>>>>>Apprenticeship Learning learnt policy
+PRISM model checking result: 1.000000
+
+>>>>>>>>Safety-Aware Apprenticeship Learning learnt policy
+PRISM model checking result: 0.000000
+Experiment: gridworld
+
+>>>>>>>>Apprenticeship Learning learns a policy  which is an optimal policy of reward function as in the figure.
+Given safety spec:
+P=? [U<= 64 'unsafe']
+
+PRISM model checking the probability of reaching the unsafe states: 0.377522
+Experiment: gridworld
+
+>>>>>>>>Apprenticeship Learning learns a policy  which is an optimal policy of reward function as in the figure.
+Given safety spec:
+P=? [U<= 81 'unsafe']
+
+PRISM model checking the probability of reaching the unsafe states: 0.870516
