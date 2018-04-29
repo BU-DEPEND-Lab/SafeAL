@@ -11,7 +11,7 @@ def play_gridworld():
     else:
         dim = 8
     grids = gridworld(dim)
-    grids.build_mdp_from_file()
+    grids.build_mdp()
     
     t = raw_input('\n#######Use Apprenticeship Learning to learn from human demonstration. Maximum step length is ' + str(dim**2) + '.\nPress Enter to continue\n')
     t = raw_input('\nDemonstrate by hand?[Y\N]')
