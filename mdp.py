@@ -279,7 +279,14 @@ class mdp():
         file.close()
 
     def move(self, state, action):
+            
         prob = random.random()
+        if state == int(self.S[-2]):
+            for s in self.starts:
+                prob -= self.T[action][state, s]
+                if prob <= 0:
+                    return s
+            return self.starts[0]
         for s in self.S:
             prob -= self.T[action][state, s]
             if prob <= 0:
@@ -382,6 +389,7 @@ class mdp():
     def optimal_policy(self, theta = None):
         if theta is None:
             theta = self.theta
+        theta = theta/np.linalg.norm(theta, ord = 2)
         self.rewards = np.dot(self.features, theta)
  
         self.policy = self.value_iteration()
