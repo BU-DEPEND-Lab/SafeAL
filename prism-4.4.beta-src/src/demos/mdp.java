@@ -121,7 +121,7 @@ public class mdp {
 		Module m = new Module(name);
 		m.setName(name);
 		m.addDeclaration(new Declaration("s", new DeclarationInt(new ExpressionLiteral(TypeInt.getInstance(), 0),
-				new ExpressionLiteral(TypeInt.getInstance(), states))));
+				new ExpressionLiteral(TypeInt.getInstance(), states - 1))));
 		
 		build_cmd(m);
 		return m;
@@ -180,8 +180,8 @@ public class mdp {
 			mf.setModelType(ModelType.MDP);
 
 			ArrayList<String> files = new ArrayList<String>();
-			String STATE_SPACE =  dir + "data/state_space";
-			String MDP = dir + "data/mdp";
+			String STATE_SPACE =  dir + "/data/state_space";
+			String MDP = dir + "/data/mdp";
 
 			files.add(STATE_SPACE);
 			files.add(MDP);

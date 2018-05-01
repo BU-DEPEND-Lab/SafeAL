@@ -1,0 +1,8 @@
+$SB.strat-v0.1
+// Strategy for step-bounded properties
+// format: stateId, b1, c1, b2, c2,..., bn, cn
+// (b1>b2>...>bn)
+// where: ci  (1<=i<n )is the choice taken when the number of steps remaining before the bound is exceeded is >=bi and <bi+1
+// cn is the choice taken after bn or less steps remain until bound is exceeded.
+Strategy:
+0 200 0

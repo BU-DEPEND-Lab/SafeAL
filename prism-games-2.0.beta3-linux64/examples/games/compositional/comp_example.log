@@ -1,0 +1,50 @@
+PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Sun Apr 15 20:36:09 EDT 2018
+Hostname: DEPEND
+Memory limits: cudd=1g, java(heap)=910.5m
+Command line: prism comp_example.prism comp_example.props -prop 1 -multimaxciter 500 -multimaxditer 500 -paretoepsilon 0.001 -logcpareto -logdpareto -gs -exportstrat comp_example.strat
+
+Parsing model file "comp_example.prism"...
+
+Parsing properties file "comp_example.props"...
+
+4 properties:
+(1) "psi": comp("phi1", "phi2")
+(2) "phi1": <<1>> ((R{"r1"}/{"c"}<=v1 [ S ]=>R{"r2"}/{"c"}>=v2 [ S ]))
+(3) "phi2": <<1>> ((R{"r1"}/{"c"}<=v1 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]))
+(4) "phi": <<1>> ((R{"r2"}/{"c"}>=v2 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]))
+
+Type:        SMG
+Modules:     G1 G2 
+Variables:   s t 
+
+Switching to explicit engine, which supports SMGs...
+
+---------------------------------------------------------------------
+
+Model checking: "psi": comp("phi1", "phi2")
+Property constants: v1=0.25,v2=1.125,v3=0.75
+//////////////////////////////////////////////////////////////////////////////
+//                   STARTING COMPOSITIONAL MODEL CHECKING                  //
+//////////////////////////////////////////////////////////////////////////////
+
+Building Model ... 
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.034 secs.
+Sorting reachable states list...
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.025 secs.
+Sorting reachable states list...
+
+Reducing multi-objective query to CNF: R{"r1"}/{"c"}>v1 [ S ]|R{"r2"}/{"c"}>=v2 [ S ]
+
+Error loading Parma Polyhedra Library:
+java.lang.UnsatisfiedLinkError: no ppl_java in java.library.path
+
+Error: Parma Polyhedra Library could not be loaded/initialised.
+
