@@ -1,4 +1,5 @@
 import sys
+import MDP
 from mdp import mdp
 from grids import grids
 import numpy as np
@@ -430,11 +431,12 @@ Input the seletion:\n')
 	streak = list()
 	
         maxepisodes = 10000
-        samples = 0
+        samples = 10000
 	for i_episode in xrange(maxepisodes):
             if True:
                 path = []
     		o = env.reset()
+                env.render()
 
                 s_i = self.observation_to_index(o)
                 self.M.T[a][self.M.S[-2], s_i] += 1.0
@@ -607,7 +609,7 @@ Input the seletion:\n')
 
 if __name__ == "__main__":
     cartpole = cartpole()
-    #cartpole.run_tool_box()
+    cartpole.run_tool_box()
     cartpole.build_MDP_from_file()
 
     opt = cartpole.learn_from_demo_file()
