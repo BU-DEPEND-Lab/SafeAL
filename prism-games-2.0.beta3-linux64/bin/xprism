@@ -3,7 +3,7 @@
 # Startup script for PRISM GUI (Linux/Solaris)
 
 # PRISM home directory
-PRISM_DIR="/home/zekunzhou/Downloads/prism-games-2.0.beta3-linux64"
+PRISM_DIR="/home/cav2018/SafeAL/prism-games-2.0.beta3-linux64"
 
 # Launch using main PRISM script
 PRISM_MAINCLASS=userinterface.GUIPrism
