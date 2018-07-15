@@ -3,7 +3,7 @@ import re
 import numpy as np
 import sys
 from grids import grids
-import MDP
+#import MDP
 
 from mdp import mdp
 from scipy import sparse
