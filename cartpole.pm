@@ -1,4 +1,7 @@
-mdp
+smg
+player p1
+    grid_world, [a0], [a1]
+endplayer
 
 const int states = 402;
 const int actions = 2;
